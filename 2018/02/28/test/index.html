@@ -4,38 +4,41 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>將theme改成jacman風格 | Jeffrey的網站</title>
+    <title>試著將blog移到根目錄 | Jeffrey的網站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Jeffrey Lin">
     
 
     
-    <meta name="description" content="將網站theme改成jacman風格
-將作品收到作品集
-查出category的語法為
-1categories:
+    <meta name="description" content="_config.yml中的網址與網站路徑要改成如下
+12url: https://afunpub.github.io/root: /
 
-更換author圖片">
+deploy的選項也要改到根目錄
+12345deploy:  type: git  repo: https://github.com/afunpub/afunpub.github.io.git  branch: master  message:
+
+hexo ne">
 <meta property="og:type" content="article">
-<meta property="og:title" content="將theme改成jacman風格">
-<meta property="og:url" content="https://afunpub.github.io/2017/02/11/jacman/index.html">
+<meta property="og:title" content="試著將blog移到根目錄">
+<meta property="og:url" content="https://afunpub.github.io/2018/02/28/test/index.html">
 <meta property="og:site_name" content="Jeffrey的網站">
-<meta property="og:description" content="將網站theme改成jacman風格
-將作品收到作品集
-查出category的語法為
-1categories:
+<meta property="og:description" content="_config.yml中的網址與網站路徑要改成如下
+12url: https://afunpub.github.io/root: /
 
-更換author圖片">
-<meta property="og:updated_time" content="2017-02-11T16:13:17.414Z">
+deploy的選項也要改到根目錄
+12345deploy:  type: git  repo: https://github.com/afunpub/afunpub.github.io.git  branch: master  message:
+
+hexo ne">
+<meta property="og:updated_time" content="2018-02-28T11:58:12.404Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="將theme改成jacman風格">
-<meta name="twitter:description" content="將網站theme改成jacman風格
-將作品收到作品集
-查出category的語法為
-1categories:
+<meta name="twitter:title" content="試著將blog移到根目錄">
+<meta name="twitter:description" content="_config.yml中的網址與網站路徑要改成如下
+12url: https://afunpub.github.io/root: /
 
-更換author圖片">
+deploy的選項也要改到根目錄
+12345deploy:  type: git  repo: https://github.com/afunpub/afunpub.github.io.git  branch: master  message:
+
+hexo ne">
 
     
     <link rel="alternative" href="/atom.xml" title="Jeffrey的網站" type="application/atom+xml">
@@ -95,14 +98,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/02/11/jacman/" title="將theme改成jacman風格" itemprop="url">將theme改成jacman風格</a>
+      <a href="/2018/02/28/test/" title="試著將blog移到根目錄" itemprop="url">試著將blog移到根目錄</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Jeffrey Lin" target="_blank" itemprop="author">Jeffrey Lin</a>
 		
   <p class="article-time">
-    <time datetime="2017-02-11T14:47:49.000Z" itemprop="datePublished"> 發表於 2017-02-11</time>
+    <time datetime="2018-02-28T11:49:46.000Z" itemprop="datePublished"> 發表於 2018-02-28</time>
     
   </p>
 </header>
@@ -115,15 +118,17 @@
 		
 		</div>
 		
-		<ul>
-<li>將網站theme改成jacman風格</li>
-<li>將作品收到<a href="https://github.com/afunpub/portfolio" target="_blank" rel="external">作品集</a></li>
-<li><p>查出category的語法為</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">categories:</div></pre></td></tr></table></figure>
+		<ol>
+<li><p>_config.yml中的網址與網站路徑要改成如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">url: https://afunpub.github.io/</div><div class="line">root: /</div></pre></td></tr></table></figure>
 </li>
-<li><p>更換author圖片</p>
+<li><p>deploy的選項也要改到根目錄</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/afunpub/afunpub.github.io.git</div><div class="line">  branch: master</div><div class="line">  message:</div></pre></td></tr></table></figure>
 </li>
-</ul>
+<li><p>hexo new 好像不能用太多中文，要再測試。</p>
+</li>
+<li>建議移站前跑一下<code>hexo g</code>讓文章的資料庫重整一下，避免無謂的錯誤。</li>
+</ol>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -132,7 +137,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/github/">github</a>
+  <span></span> <a href="/tags/hexo/">hexo</a>
   </div>
 
 </div>
@@ -141,7 +146,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://afunpub.github.io/2017/02/11/jacman/" data-title="將theme改成jacman風格 | Jeffrey的網站" data-tsina="null" class="share clearfix">
+	  <div data-url="https://afunpub.github.io/2018/02/28/test/" data-title="試著將blog移到根目錄 | Jeffrey的網站" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -154,19 +159,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/07/15/office中的msocache檔案夾不見/" title="office中的msocache檔案夾不見">
-  <strong>上一篇：</strong><br/>
-  <span>
-  office中的msocache檔案夾不見</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/02/10/pages/"  title="將網站deploy到git pages上">
+<a href="/2018/02/28/hello-world/"  title="hexo常用語法說明">
  <strong>下一篇：</strong><br/> 
- <span>將網站deploy到git pages上
+ <span>hexo常用語法說明
 </span>
 </a>
 </div>
