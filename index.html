@@ -106,9 +106,17 @@
 <li>建議移站前跑一下<code>hexo g</code>讓文章的資料庫重整一下，避免無謂的錯誤。</li>
 </ol>
 <h1 id="手動上傳到git"><a href="#手動上傳到git" class="headerlink" title="手動上傳到git"></a>手動上傳到git</h1><ol>
-<li>將’public/‘資料夾的上傳路徑設好’git remote add origin <a href="https://github.com/afunpub/afunpub.github.io.git" target="_blank" rel="external">https://github.com/afunpub/afunpub.github.io.git</a>‘</li>
-<li>然後將’public/‘底下的檔案上傳到github上’</li>
-<li>這時候常會出現網站與本地檔案時間不同，然後拒絕上傳<code>Updates were rejected because the tip of your current branch is behind</code>，我通常會下<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git pull origin master</div><div class="line">git push --set-upstream origin master -f</div><div class="line">或</div><div class="line">git push -u origin master -f</div><div class="line">那個-u就是--set-upstream的意思</div><div class="line">有設origin路徑的話，origin master可省略。</div></pre></td></tr></table></figure></li>
+<li>下<code>hexo d</code>他會將public資料夾變動的檔案複製到.deploy_git資料夾內</li>
+<li>將’.deploy_git/‘資料夾的上傳路徑設好’git remote add origin <a href="https://github.com/afunpub/afunpub.github.io.git" target="_blank" rel="external">https://github.com/afunpub/afunpub.github.io.git</a>‘</li>
+<li>然後將’.deploy_git/‘底下的檔案上傳到github上’</li>
+<li><p>這時候常會出現網站與本地檔案時間不同，然後拒絕上傳<code>Updates were rejected because the tip of your current branch is behind</code>，我通常會下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">git pull origin master</div><div class="line">git push --set-upstream origin master -f</div><div class="line">或</div><div class="line">git push -u origin master -f</div><div class="line">git push -u -f</div><div class="line">那個-u就是--set-upstream的意思</div><div class="line">有設origin路徑的話，origin master可省略。</div></pre></td></tr></table></figure>
+</li>
+<li><p>可以寫成一個sh檔來執行，因為懶。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo d</div><div class="line">cd .deploy_git/</div><div class="line">git add .</div><div class="line">git commit -m &quot;update&quot;</div><div class="line">git push -u origin master -f</div><div class="line">cd ..</div><div class="line">注意origin要先設好</div></pre></td></tr></table></figure>
+</li>
+<li><p>最後自己blog也要上傳</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m &quot;update&quot;</div><div class="line">git push -u origin master -f</div></pre></td></tr></table></figure></li>
 </ol>
 
         
