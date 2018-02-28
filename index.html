@@ -94,16 +94,21 @@
 </header>
     <div class="article-content">
         
-        <ol>
+        <h1 id="修改設定檔"><a href="#修改設定檔" class="headerlink" title="修改設定檔"></a>修改設定檔</h1><ol>
 <li><p>_config.yml中的網址與網站路徑要改成如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">url: https://afunpub.github.io/</div><div class="line">root: /</div></pre></td></tr></table></figure>
 </li>
-<li><p>deploy的選項也要改到根目錄</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/afunpub/afunpub.github.io.git</div><div class="line">  branch: master</div><div class="line">  message:</div></pre></td></tr></table></figure>
+<li><p>如果要用<code>hexo d</code>指令的話deploy的選項也要改到根目錄，但常失敗。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">先安裝npm install hexo-deployer-git --save</div><div class="line">再修改</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/afunpub/afunpub.github.io.git</div><div class="line">  branch: master</div><div class="line">  message:</div></pre></td></tr></table></figure>
 </li>
 <li><p>hexo new 好像不能用太多中文，要再測試。</p>
 </li>
 <li>建議移站前跑一下<code>hexo g</code>讓文章的資料庫重整一下，避免無謂的錯誤。</li>
+</ol>
+<h1 id="手動上傳到git"><a href="#手動上傳到git" class="headerlink" title="手動上傳到git"></a>手動上傳到git</h1><ol>
+<li>將’public/‘資料夾的上傳路徑設好’git remote add origin <a href="https://github.com/afunpub/afunpub.github.io.git" target="_blank" rel="external">https://github.com/afunpub/afunpub.github.io.git</a>‘</li>
+<li>然後將’public/‘底下的檔案上傳到github上’</li>
+<li>這時候常會出現網站與本地檔案時間不同，然後拒絕上傳<code>Updates were rejected because the tip of your current branch is behind</code>，我通常會下<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git pull origin master</div><div class="line">git push --set-upstream origin master -f</div><div class="line">或</div><div class="line">git push -u origin master -f</div><div class="line">那個-u就是--set-upstream的意思</div><div class="line">有設origin路徑的話，origin master可省略。</div></pre></td></tr></table></figure></li>
 </ol>
 
         
