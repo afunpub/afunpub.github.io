@@ -81,6 +81,72 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2018/03/04/2018-03-04/" title="使用hexo自動上傳github功能" itemprop="url">使用hexo自動上傳github功能</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Jeffrey Lin" target="_blank" itemprop="author">Jeffrey Lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-03-04T13:22:41.000Z" itemprop="datePublished"> 發表於 2018-03-04</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <ol>
+<li>用系統管理員身分執行<code>cmd</code><br>之前安裝<code>npm install hexo-deployer-git --save</code>會顯是失敗是我沒注意到錯誤訊息上顯是要用系統管理員的身分執行，所以要搜尋到<code>cmd</code>指令，按右鍵使用系統管理員身分執行，就可以順利安裝</li>
+<li>下<code>npm i -g npm</code>安裝最新npm版本</li>
+<li>下<code>npm install hexo-deployer-git --save</code>安裝hexo deploy工具</li>
+<li>寫下本文紀錄如何成功安裝<code>npm install hexo-deployer-git --save</code></li>
+<li><p>下指令試試看是否可正常使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo s</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+</li>
+<li><p>最後<code>git push</code>備份。</p>
+</li>
+</ol>
+<h3 id="錯誤提醒"><a href="#錯誤提醒" class="headerlink" title="錯誤提醒"></a>錯誤提醒</h3><p>這次執行結果的錯誤訊息是各項md語法一定要空一格，我就是<code>tags: hexo</code>中tags:的後面沒有空格，所以顯示不出文件，下次要注意。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/hexo/">hexo</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2018/02/28/移站/" title="試著將blog移到根目錄" itemprop="url">試著將blog移到根目錄</a>
   </h1>
   <p class="article-author">By
@@ -542,7 +608,7 @@
 			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>3</sup></a></li>
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
 			
 		
 			
