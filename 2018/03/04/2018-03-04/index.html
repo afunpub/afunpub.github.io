@@ -23,7 +23,7 @@
 下npm i -g npm安裝最新npm版本
 下npm install hexo-deployer-git --save安裝hexo deploy工具
 寫下本文">
-<meta property="og:updated_time" content="2018-03-04T13:41:10.663Z">
+<meta property="og:updated_time" content="2018-03-04T14:40:23.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo自動上傳github功能">
 <meta name="twitter:description" content="用系統管理員身分執行cmd之前安裝npm install hexo-deployer-git --save會顯是失敗是我沒注意到錯誤訊息上顯是要用系統管理員的身分執行，所以要搜尋到cmd指令，按右鍵使用系統管理員身分執行，就可以順利安裝
@@ -119,6 +119,7 @@
 </li>
 <li><p>最後<code>git push</code>備份。</p>
 </li>
+<li>結果是不能使用，原因是要將登入github方式由https改成ssh，但是有點懶，我還是手動上傳就好。</li>
 </ol>
 <h3 id="錯誤提醒"><a href="#錯誤提醒" class="headerlink" title="錯誤提醒"></a>錯誤提醒</h3><p>這次執行結果的錯誤訊息是各項md語法一定要空一格，我就是<code>tags: hexo</code>中tags:的後面沒有空格，所以顯示不出文件，下次要注意。</p>
   
