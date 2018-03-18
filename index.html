@@ -81,6 +81,73 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2018/03/18/使用node建立簡易http-server/" title="使用node建立簡易http server" itemprop="url">使用node建立簡易http server</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Jeffrey Lin" target="_blank" itemprop="author">Jeffrey Lin</a>
+		
+  <p class="article-time">
+    <time datetime="2018-03-18T13:18:54.000Z" itemprop="datePublished"> 發表於 2018-03-18</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <ol>
+<li>在index.html的目錄建立<code>server.js</code>檔</li>
+<li><p>輸入<code>server.js</code>內容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">var http = require(&apos;http&apos;);</div><div class="line">var fs = require(&apos;fs&apos;);</div><div class="line">//404 response</div><div class="line">function sent404Response(response)&#123;</div><div class="line">        response.writeHead(404,&#123;&quot;Context-Type&quot;:&quot;text/plain&quot;&#125;);</div><div class="line">        response.write(&apos;Error 404:Page not found!&apos;); //write a response to the client</div><div class="line">        response.end(); //end the response</div><div class="line">&#125;</div><div class="line">//handle a user request function</div><div class="line">function onRequest(req, res) &#123;</div><div class="line">        /*</div><div class="line">        console.log(&quot;A user made a request &quot;+ req.url);</div><div class="line">        res.writeHead(200,&#123;&quot;Context-Type&quot;:&quot;text/plain&quot;&#125;);</div><div class="line">        res.write(&apos;Here is some data.&apos;); //write a response to the client</div><div class="line">        res.end(); //end the response</div><div class="line">        */</div><div class="line">        if (req.method == &apos;GET&apos; &amp;&amp; req.url == &apos;/&apos;) &#123;</div><div class="line">                res.writeHead(200,&#123;&quot;Context-Type&quot;:&quot;text/plain&quot;&#125;);</div><div class="line">                fs.createReadStream(&quot;./index.html&quot;).pipe(res);//將&quot;./index.html&quot;傳入res參數內</div><div class="line">        &#125;else&#123;</div><div class="line">                sent404Response(res);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">//create a server object:</div><div class="line">http.createServer(onRequest).listen(8888); //the server object listens on port 8080</div><div class="line">console.log(&quot;Server is now running.&quot;)</div></pre></td></tr></table></figure>
+</li>
+<li><p>執行<code>server.js</code> <code>node server.js</code></p>
+</li>
+<li><p>其實最簡單的方式就是安裝<code>http-server</code>模組。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i -g http-server</div></pre></td></tr></table></figure>
+</li>
+<li><p>執行<code>http-server</code>即可。</p>
+</li>
+</ol>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/node/">node</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2018/03/04/2018-03-04/" title="使用hexo自動上傳github功能" itemprop="url">使用hexo自動上傳github功能</a>
   </h1>
   <p class="article-author">By
@@ -610,6 +677,10 @@
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node/" title="node">node<sup>1</sup></a></li>
 			
 		
 			

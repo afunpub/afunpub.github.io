@@ -4,38 +4,29 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>試著將blog移到根目錄 | Jeffrey的網站</title>
+    <title>使用node建立簡易http server | Jeffrey的網站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Jeffrey Lin">
     
 
     
-    <meta name="description" content="修改設定檔
-_config.yml中的網址與網站路徑要改成如下
-12url: https://afunpub.github.io/root: /
-
-如果要用hexo d指令的話deploy的選項也要改到根目錄，但常失敗。
-1234567先安裝npm install hexo-deployer-git --save再修改deploy:  type: git  repo: https://github">
+    <meta name="description" content="在index.html的目錄建立server.js檔
+輸入server.js內容
+123456789101112131415161718192021222324252627var http = require(&amp;apos;http&amp;apos;);var fs = require(&amp;apos;fs&amp;apos;);//404 responsefunction sent404Response(resp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="試著將blog移到根目錄">
-<meta property="og:url" content="https://afunpub.github.io/2018/02/28/移站/index.html">
+<meta property="og:title" content="使用node建立簡易http server">
+<meta property="og:url" content="https://afunpub.github.io/2018/03/18/使用node建立簡易http-server/index.html">
 <meta property="og:site_name" content="Jeffrey的網站">
-<meta property="og:description" content="修改設定檔
-_config.yml中的網址與網站路徑要改成如下
-12url: https://afunpub.github.io/root: /
-
-如果要用hexo d指令的話deploy的選項也要改到根目錄，但常失敗。
-1234567先安裝npm install hexo-deployer-git --save再修改deploy:  type: git  repo: https://github">
-<meta property="og:updated_time" content="2018-02-28T14:31:26.651Z">
+<meta property="og:description" content="在index.html的目錄建立server.js檔
+輸入server.js內容
+123456789101112131415161718192021222324252627var http = require(&amp;apos;http&amp;apos;);var fs = require(&amp;apos;fs&amp;apos;);//404 responsefunction sent404Response(resp">
+<meta property="og:updated_time" content="2018-03-18T13:27:01.309Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="試著將blog移到根目錄">
-<meta name="twitter:description" content="修改設定檔
-_config.yml中的網址與網站路徑要改成如下
-12url: https://afunpub.github.io/root: /
-
-如果要用hexo d指令的話deploy的選項也要改到根目錄，但常失敗。
-1234567先安裝npm install hexo-deployer-git --save再修改deploy:  type: git  repo: https://github">
+<meta name="twitter:title" content="使用node建立簡易http server">
+<meta name="twitter:description" content="在index.html的目錄建立server.js檔
+輸入server.js內容
+123456789101112131415161718192021222324252627var http = require(&amp;apos;http&amp;apos;);var fs = require(&amp;apos;fs&amp;apos;);//404 responsefunction sent404Response(resp">
 
     
     <link rel="alternative" href="/atom.xml" title="Jeffrey的網站" type="application/atom+xml">
@@ -95,14 +86,14 @@ _config.yml中的網址與網站路徑要改成如下
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/02/28/移站/" title="試著將blog移到根目錄" itemprop="url">試著將blog移到根目錄</a>
+      <a href="/2018/03/18/使用node建立簡易http-server/" title="使用node建立簡易http server" itemprop="url">使用node建立簡易http server</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Jeffrey Lin" target="_blank" itemprop="author">Jeffrey Lin</a>
 		
   <p class="article-time">
-    <time datetime="2018-02-28T12:39:06.000Z" itemprop="datePublished"> 發表於 2018-02-28</time>
+    <time datetime="2018-03-18T13:18:54.000Z" itemprop="datePublished"> 發表於 2018-03-18</time>
     
   </p>
 </header>
@@ -111,33 +102,22 @@ _config.yml中的網址與網站路徑要改成如下
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#修改設定檔"><span class="toc-number">1.</span> <span class="toc-text">修改設定檔</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#手動上傳到git"><span class="toc-number">2.</span> <span class="toc-text">手動上傳到git</span></a></li></ol>
+			
 		
 		</div>
 		
-		<h1 id="修改設定檔"><a href="#修改設定檔" class="headerlink" title="修改設定檔"></a>修改設定檔</h1><ol>
-<li><p>_config.yml中的網址與網站路徑要改成如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">url: https://afunpub.github.io/</div><div class="line">root: /</div></pre></td></tr></table></figure>
+		<ol>
+<li>在index.html的目錄建立<code>server.js</code>檔</li>
+<li><p>輸入<code>server.js</code>內容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">var http = require(&apos;http&apos;);</div><div class="line">var fs = require(&apos;fs&apos;);</div><div class="line">//404 response</div><div class="line">function sent404Response(response)&#123;</div><div class="line">        response.writeHead(404,&#123;&quot;Context-Type&quot;:&quot;text/plain&quot;&#125;);</div><div class="line">        response.write(&apos;Error 404:Page not found!&apos;); //write a response to the client</div><div class="line">        response.end(); //end the response</div><div class="line">&#125;</div><div class="line">//handle a user request function</div><div class="line">function onRequest(req, res) &#123;</div><div class="line">        /*</div><div class="line">        console.log(&quot;A user made a request &quot;+ req.url);</div><div class="line">        res.writeHead(200,&#123;&quot;Context-Type&quot;:&quot;text/plain&quot;&#125;);</div><div class="line">        res.write(&apos;Here is some data.&apos;); //write a response to the client</div><div class="line">        res.end(); //end the response</div><div class="line">        */</div><div class="line">        if (req.method == &apos;GET&apos; &amp;&amp; req.url == &apos;/&apos;) &#123;</div><div class="line">                res.writeHead(200,&#123;&quot;Context-Type&quot;:&quot;text/plain&quot;&#125;);</div><div class="line">                fs.createReadStream(&quot;./index.html&quot;).pipe(res);//將&quot;./index.html&quot;傳入res參數內</div><div class="line">        &#125;else&#123;</div><div class="line">                sent404Response(res);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">//create a server object:</div><div class="line">http.createServer(onRequest).listen(8888); //the server object listens on port 8080</div><div class="line">console.log(&quot;Server is now running.&quot;)</div></pre></td></tr></table></figure>
 </li>
-<li><p>如果要用<code>hexo d</code>指令的話deploy的選項也要改到根目錄，但常失敗。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">先安裝npm install hexo-deployer-git --save</div><div class="line">再修改</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/afunpub/afunpub.github.io.git</div><div class="line">  branch: master</div><div class="line">  message:</div></pre></td></tr></table></figure>
+<li><p>執行<code>server.js</code> <code>node server.js</code></p>
 </li>
-<li><p>hexo new 好像不能用太多中文，要再測試。</p>
+<li><p>其實最簡單的方式就是安裝<code>http-server</code>模組。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i -g http-server</div></pre></td></tr></table></figure>
 </li>
-<li>建議移站前跑一下<code>hexo g</code>讓文章的資料庫重整一下，避免無謂的錯誤。</li>
-</ol>
-<h1 id="手動上傳到git"><a href="#手動上傳到git" class="headerlink" title="手動上傳到git"></a>手動上傳到git</h1><ol>
-<li>下<code>hexo d</code>他會將public資料夾變動的檔案複製到.deploy_git資料夾內</li>
-<li>將’.deploy_git/‘資料夾的上傳路徑設好’git remote add origin <a href="https://github.com/afunpub/afunpub.github.io.git" target="_blank" rel="external">https://github.com/afunpub/afunpub.github.io.git</a>‘</li>
-<li>然後將’.deploy_git/‘底下的檔案上傳到github上’</li>
-<li><p>這時候常會出現網站與本地檔案時間不同，然後拒絕上傳<code>Updates were rejected because the tip of your current branch is behind</code>，我通常會下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">git pull origin master</div><div class="line">git push --set-upstream origin master -f</div><div class="line">或</div><div class="line">git push -u origin master -f</div><div class="line">git push -u -f</div><div class="line">那個-u就是--set-upstream的意思</div><div class="line">有設origin路徑的話，origin master可省略。</div></pre></td></tr></table></figure>
+<li><p>執行<code>http-server</code>即可。</p>
 </li>
-<li><p>可以寫成一個sh檔來執行，因為懶。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo d</div><div class="line">cd .deploy_git/</div><div class="line">git add .</div><div class="line">git commit -m &quot;update&quot;</div><div class="line">git push -u origin master -f</div><div class="line">cd ..</div><div class="line">注意origin要先設好</div></pre></td></tr></table></figure>
-</li>
-<li><p>最後自己blog也要上傳</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m &quot;update&quot;</div><div class="line">git push -u origin master -f</div></pre></td></tr></table></figure></li>
 </ol>
   
 	</div>
@@ -147,7 +127,7 @@ _config.yml中的網址與網站路徑要改成如下
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/hexo/">hexo</a>
+  <span></span> <a href="/tags/node/">node</a>
   </div>
 
 </div>
@@ -156,7 +136,7 @@ _config.yml中的網址與網站路徑要改成如下
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="https://afunpub.github.io/2018/02/28/移站/" data-title="試著將blog移到根目錄 | Jeffrey的網站" data-tsina="null" class="share clearfix">
+	  <div data-url="https://afunpub.github.io/2018/03/18/使用node建立簡易http-server/" data-title="使用node建立簡易http server | Jeffrey的網站" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -169,19 +149,11 @@ _config.yml中的網址與網站路徑要改成如下
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2018/03/04/2018-03-04/" title="使用hexo自動上傳github功能">
-  <strong>上一篇：</strong><br/>
-  <span>
-  使用hexo自動上傳github功能</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2018/02/28/hello-world/"  title="hexo常用語法說明">
+<a href="/2018/03/04/2018-03-04/"  title="使用hexo自動上傳github功能">
  <strong>下一篇：</strong><br/> 
- <span>hexo常用語法說明
+ <span>使用hexo自動上傳github功能
 </span>
 </a>
 </div>
@@ -196,7 +168,7 @@ _config.yml中的網址與網站路徑要改成如下
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#修改設定檔"><span class="toc-number">1.</span> <span class="toc-text">修改設定檔</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#手動上傳到git"><span class="toc-number">2.</span> <span class="toc-text">手動上傳到git</span></a></li></ol>
+ 
  
   </div>
 
